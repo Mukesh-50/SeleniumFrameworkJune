@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
@@ -32,9 +33,10 @@ public class BaseClass {
 		report.attachReporter(html);
 		System.out.println("****LOG:INFO - Reporting set****");
 	}
-
+	
 	@BeforeClass
-	public void startSession() {
+	public void startSession() 
+	{
 		System.out.println("****LOG:INFO - Starting Browser Session****");
 		String browser=DataProviderFactory.getConfig().getData("Browser");
 		String url=DataProviderFactory.getConfig().getData("stagingURL");
@@ -52,10 +54,12 @@ public class BaseClass {
 	
 
 	@AfterMethod
-	public void tearDownReport(ITestResult result) {
+	public void tearDownReport(ITestResult result) 
+	{
 		System.out.println("****LOG:INFO -Collecting Result from Test****");
 		if (ITestResult.SUCCESS == result.getStatus()) {
-			try {
+			try 
+			{
 				logger.log(Status.PASS, "Test Passed",MediaEntityBuilder.createScreenCaptureFromPath(Helper.captureScreenshotNew(driver)).build());
 			} catch (IOException e) {
 				System.out.println("Exception " + e.getMessage());

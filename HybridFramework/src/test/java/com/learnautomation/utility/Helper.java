@@ -24,7 +24,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Helper {
 
 	
-	
 	public static void highLightElement(WebDriver driver,WebElement element)
 	{
 		
