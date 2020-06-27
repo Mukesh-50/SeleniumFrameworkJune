@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -21,7 +21,7 @@ import com.learnautomation.utility.Helper;
 
 public class BaseClass {
 
-	public ExtentReports report;
+	public static ExtentReports report;
 	public ExtentTest logger;
 	public WebDriver driver;
 
@@ -34,7 +34,23 @@ public class BaseClass {
 		System.out.println("****LOG:INFO - Reporting set****");
 	}
 	
-	@BeforeClass
+	// Please use this when you want to accept parameter from Maven/Gradle/Jenkins
+	
+	
+	   @Parameters({"Browser","URL"})
+	   @BeforeClass
+		public void startSession(String browserType,String appURL) 
+		{
+			System.out.println("****LOG:INFO - Starting Browser Session****");
+			driver = BrowserFactory.startBrowser(browserType,appURL);
+			System.out.println("****LOG:INFO - Started Browser Session****");
+		}
+	
+	
+/*	
+ *  Please use this if you want to continue with config/property file
+ * 
+ * @BeforeClass
 	public void startSession() 
 	{
 		System.out.println("****LOG:INFO - Starting Browser Session****");
@@ -42,7 +58,7 @@ public class BaseClass {
 		String url=DataProviderFactory.getConfig().getData("stagingURL");
 		driver = BrowserFactory.startBrowser(browser,url);
 		System.out.println("****LOG:INFO - Started Browser Session****");
-	}
+	}*/
 	
 	@AfterClass
 	public void closeSession()

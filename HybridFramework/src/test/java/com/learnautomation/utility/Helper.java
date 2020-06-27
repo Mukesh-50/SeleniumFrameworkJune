@@ -33,8 +33,7 @@ public class Helper {
 		try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			
 		}
 		
 		js.executeScript("arguments[0].setAttribute('style','border: solid 2px white');", element); 

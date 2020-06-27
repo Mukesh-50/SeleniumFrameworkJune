@@ -6,27 +6,22 @@ import org.testng.annotations.Test;
 import com.learnautomation.factory.DataProviderFactory;
 import com.learnautomation.pages.BaseClass;
 import com.learnautomation.pages.LoginPage;
-import com.learnautomation.pages.LogoutPage;
+import com.learnautomation.pages.UserManagement;
 
-public class LoginTest extends BaseClass
-{
+public class CreateUser extends BaseClass{
+
 	LoginPage login;
-	LogoutPage logOut;
+	UserManagement user;
 	
-	@Test(priority=1)
-	public void loginWithAdmin() 
+	@Test
+	public void createUser()
 	{
-		logger=report.createTest("LoginTest", "Login to CRM with valid credential");
+		logger=report.createTest("CreateUser", "This test will create new user");
 		login=PageFactory.initElements(driver, LoginPage.class);
+		user=PageFactory.initElements(driver, UserManagement.class);
 		login.loginToApplication(DataProviderFactory.getExcel().getCellData("Login", 0, 0),DataProviderFactory.getExcel().getCellData("Login", 0, 1));
+		user.createUser();
 	}
 	
-	@Test(priority=2,dependsOnMethods="loginWithAdmin")
-	public void logout() 
-	{
-		logger=report.createTest("Logout Test", "Logout from current session");
-		logOut=PageFactory.initElements(driver, LogoutPage.class);
-		logOut.logOutFromApplication();
-	}
-
+	
 }
