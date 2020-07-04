@@ -28,7 +28,9 @@ public class BaseClass {
 	@BeforeSuite
 	public void setupReport() {
 		System.out.println("****LOG:INFO - Setting up report****");
-		ExtentHtmlReporter html = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Report/Selenium"+Helper.getCurrentDateTime()+".html");
+		//ExtentHtmlReporter html = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Report/Selenium"+Helper.getCurrentDateTime()+".html");
+		ExtentHtmlReporter html = new ExtentHtmlReporter(System.getProperty("user.dir") + "/Report/AutomationReport.html");
+
 		report = new ExtentReports();
 		report.attachReporter(html);
 		System.out.println("****LOG:INFO - Reporting set****");
