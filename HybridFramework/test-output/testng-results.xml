@@ -2,39 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="27038" started-at="2020-06-27T08:19:03 IST" finished-at="2020-06-27T08:19:30 IST">
+  <suite name="Default suite" duration-ms="25818" started-at="2020-07-04T23:22:35 IST" finished-at="2020-07-04T23:23:01 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="27038" started-at="2020-06-27T08:19:03 IST" finished-at="2020-06-27T08:19:30 IST">
-      <class name="com.learnautomation.testcases.CreateUser">
-        <test-method status="PASS" signature="setupReport()[pri:0, instance:com.learnautomation.testcases.CreateUser@536aaa8d]" name="setupReport" is-config="true" duration-ms="255" started-at="2020-06-27T08:19:03 IST" finished-at="2020-06-27T08:19:03 IST">
+    <test name="Default test" duration-ms="25818" started-at="2020-07-04T23:22:35 IST" finished-at="2020-07-04T23:23:01 IST">
+      <class name="com.learnautomation.testcases.BrowserStackTest">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.learnautomation.testcases.BrowserStackTest@2d8f65a4]" name="test1" duration-ms="25710" started-at="2020-07-04T23:22:35 IST" finished-at="2020-07-04T23:23:01 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setupReport -->
-        <test-method status="PASS" signature="startSession()[pri:0, instance:com.learnautomation.testcases.CreateUser@536aaa8d]" name="startSession" is-config="true" duration-ms="9097" started-at="2020-06-27T08:19:03 IST" finished-at="2020-06-27T08:19:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startSession -->
-        <test-method status="PASS" signature="createUser()[pri:0, instance:com.learnautomation.testcases.CreateUser@536aaa8d]" name="createUser" duration-ms="15533" started-at="2020-06-27T08:19:12 IST" finished-at="2020-06-27T08:19:28 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createUser -->
-        <test-method status="PASS" signature="tearDownReport(org.testng.ITestResult)[pri:0, instance:com.learnautomation.testcases.CreateUser@536aaa8d]" name="tearDownReport" is-config="true" duration-ms="1468" started-at="2020-06-27T08:19:28 IST" finished-at="2020-06-27T08:19:29 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=createUser status=SUCCESS method=CreateUser.createUser()[pri:0, instance:com.learnautomation.testcases.CreateUser@536aaa8d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownReport -->
-        <test-method status="PASS" signature="closeSession()[pri:0, instance:com.learnautomation.testcases.CreateUser@536aaa8d]" name="closeSession" is-config="true" duration-ms="885" started-at="2020-06-27T08:19:29 IST" finished-at="2020-06-27T08:19:30 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeSession -->
-      </class> <!-- com.learnautomation.testcases.CreateUser -->
+        </test-method> <!-- test1 -->
+      </class> <!-- com.learnautomation.testcases.BrowserStackTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
